@@ -1,6 +1,6 @@
 function lengthValue(num1, num2) {
     arr = [];
-    for (i = 0; i < num1; i++) {
+    for (var i = 0; i < num1; i++) {
         arr.push(num2);
     }
     if (num1 == num2) {
