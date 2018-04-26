@@ -1,25 +1,15 @@
 function letterGrade(score) {
-    var sign = "";
-    if (score % 10 == 0 || score % 10 == 1 || score % 10 == 2) { 
-        sign = "-";
-        }
-    else if (score % 10 == 8 || score % 10 == 9) { 
-        sign = "+";
-    }
-    if (score >=98 && score <=100) {
+    if (score >=90 && score <=100) {
         console.log ("Score: " + score + ". Grade: A");
     }
-    else if (score >=90 && score <=97) {
-        console.log ("Score: " + score + ". Grade: A" + sign);
-    }
     else if (score >=80 && score <90) {
-        console.log ("Score: " + score + ". Grade: B" + sign);
+        console.log ("Score: " + score + ". Grade: B");
     }
     else if (score >=70 && score <80) {
-        console.log ("Score: " + score + ". Grade: C" + sign);
+        console.log ("Score: " + score + ". Grade: C");
     }
     else if (score >=60 && score <70) {
-        console.log ("Score: " + score + ". Grade: D" + sign);
+        console.log ("Score: " + score + ". Grade: D");
     }
     else if (score >=0 && score <60) {
         console.log ("Score: " + score + ". Grade: F");
@@ -28,4 +18,4 @@ function letterGrade(score) {
         console.log ("That's not a valid score!");
     }
 }
-console.log(letterGrade(61));
+console.log(letterGrade(61)); 
