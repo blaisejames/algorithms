@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>Weekend Challenge</title>
+    <script>
+    // Declare variables
+    var answer = [];
+    var score = 0;
+    var arr = ["What is the only American state to begin with the letter 'p'?", "Pennsylvania", "Name the world's biggest island?", "Greenland", "What is the world's longest river?", "Amazon", "Name the world's largest ocean?", "Pacific", "How many miles around is the diameter of Earth (rounded to the nearest 1,000 miles)?", "8000"];
+    
+    // Loop through array containing question and answer
+    for (i = 0; i <= arr.length-1; i=i+2) {
+        // Collect user's name
+        if (i == 0) {
+            var name = prompt("Welcome to the geography trivia game! What is your name?");
+            alert("Hello, " + name + "! Let's play!");
+        }
+        // Call each question and answer
+        answer[i] = prompt(arr[i]);
+        // Validate user answer is correct and add to score
+        if (answer[i] == arr[i+1]) {
+            alert("Correct, " + name + "!");
+            score++;
+        }
+        // Tell user answer is incorrect and allow user to quit
+        else {
+            if (confirm("Sorry, " + name + ". That's not correct.\nYou can quit at any time by pressing Cancel.")){
+                continue;
+            }
+            else {
+                break;
+            }
+        }
+    }
+    // Provide final tally
+    alert(name + ", your final score is " + score/5 * 100 + " percent. You got " + score + " out of 5!");
+    </script>
+</head>
+<body>
+</body>
+</html>
